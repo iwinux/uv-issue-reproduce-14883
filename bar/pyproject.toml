@@ -2,4 +2,12 @@
 name = "bar"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = ["foo"]
+
+[[tool.uv.index]]
+name = "local"
+url = "/tmp/pypi"
+explicit = true
+
+[tool.uv.sources]
+foo = { index = "local" }
